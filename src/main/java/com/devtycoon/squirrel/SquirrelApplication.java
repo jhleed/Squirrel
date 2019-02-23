@@ -12,3 +12,6 @@ public class SquirrelApplication {
 
 }
 
+// 여기가 시작점
+// 서버를 띄우는 역할을 함 ( + 환경설정도 해줌 )
+// -> 그 일들을 하는게 @SpringBootApplication 어노테이션이다.

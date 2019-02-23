@@ -16,7 +16,7 @@ public class PostsSaveRequestDto {
     private  String content;
     private  String author;
 
-    public Posts toEntity() {
+    public Posts toEntity() { // 빌더 패턴
         return Posts.builder()
                 .title(title)
                 .content(content)

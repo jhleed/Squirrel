@@ -35,7 +35,7 @@ public class PostsRepositoryTest {
 //        );
 
         // 아래의 값들을 가진 객체를 생성
-        postsRepository.save(Posts.builder()
+        postsRepository.save(Posts.builder() // select * from tablename
                 .title("테스트 게시글")
                 .content("테스트 본문")
                 .author("seon_and_young@naver.com")
@@ -43,7 +43,7 @@ public class PostsRepositoryTest {
         );
 
         //when
-        List<Posts> postsList = postsRepository.findAll();
+        List<Posts> postsList = postsRepository.findAll(); // select * from tablename
 
         //then
         Posts posts = postsList.get(0);
