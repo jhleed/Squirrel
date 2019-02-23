@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.hamcrest.core.Is.is;
@@ -50,6 +51,28 @@ public class PostsRepositoryTest {
         assertThat(posts.getTitle(), is("테스트 게시글"));
         assertThat(posts.getContent(), is("테스트 본문"));
 
+
+
+    }
+
+    @Test
+    public void BaseTimeEntity_등록() {
+        //given -> 현재 상태
+        LocalDateTime now = LocalDateTime.now();
+        postsRepository.save(Posts.builder()
+            .title("테스트 게시글")
+            .content("테스트 본문")
+            .author("sunyoung")
+            .build()
+        );
+
+        //when -> 어떤 이벤트를 취했을 때
+        List<Posts> postsList = postsRepository.findAll();
+
+        //then -> 그 이벤트로 인해 결과가 바뀌었을 때
+        Posts posts = postsList.get(0);
+        assertTrue(posts.getCreatedDate().isAfter(now));
+        assertTrue(posts.getModifiedDate().isAfter(now));
     }
 }
 
