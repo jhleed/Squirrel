@@ -69,8 +69,8 @@ public class PostsRepositoryTest {
 
         //then -> 그 이벤트로 인해 결과가 바뀌었을 때
         Posts posts = postsList.get(0);
-        //assertTrue(posts.getCreatedDate().isAfter(now));
-        //assertTrue(posts.getModifiedDate().isAfter(now));
+        assertTrue(posts.getCreatedDate().isAfter(now));
+        assertTrue(posts.getModifiedDate().isAfter(now));
     }
 }
 
