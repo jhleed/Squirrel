@@ -28,5 +28,4 @@ public class WebRestController {
         postsRepository.save(entity);
     }
     // @RequestBody json으로 들어온 리퀘스트 바디를 매핑 시키겠다 ( PostsSaveRequestDto dto <- 요 파라미터한테 )
-
 }

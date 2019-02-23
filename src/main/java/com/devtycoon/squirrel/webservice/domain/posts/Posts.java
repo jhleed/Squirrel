@@ -1,5 +1,6 @@
 package com.devtycoon.squirrel.webservice.domain.posts;
 
+import com.devtycoon.squirrel.webservice.domain.BaseTimeEntity;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -10,7 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED) // 기본 접근권한을 protected
 @Getter // Lombok 입니당
 @Entity // 라벨. 맵핑할 Object라는걸 식별함
-public class Posts {
+public class Posts extends BaseTimeEntity {
     @Id // 프라이머리 키를 가져오는 것
     @GeneratedValue(strategy = GenerationType.AUTO) // 기본값이 AUTO. id를 설정하면 id로 되지만 설정하지 않으면 자동으로 증가하게 한다.
     private  Long id; // id, GeneratedValue 어노테이션을 붙인거임
