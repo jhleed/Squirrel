@@ -1,8 +1,7 @@
-package com.jojoldu.webservice.web;
+package com.devtycoon.webservice.web;
 
-import com.jojoldu.webservice.domain.posts.PostsRepository;
-import com.jojoldu.webservice.dto.posts.PostsSaveRequestDto;
-import com.jojoldu.webservice.service.PostsService;
+import com.devtycoon.webservice.domain.posts.PostsRepository;
+import com.devtycoon.webservice.dto.posts.PostsSaveRequestDto;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,7 +1,7 @@
-package com.jojoldu.webservice.service;
+package com.devtycoon.webservice.service;
 
-import com.jojoldu.webservice.domain.posts.Posts;
-import com.jojoldu.webservice.domain.posts.PostsRepository;
+import com.devtycoon.webservice.domain.posts.Posts;
+import com.devtycoon.webservice.domain.posts.PostsRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
