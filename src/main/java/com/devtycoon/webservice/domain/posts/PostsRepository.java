@@ -1,12 +1,13 @@
 package com.devtycoon.webservice.domain.posts;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
-/**
- * Created by jojoldu@gmail.com on 2017. 12. 23.
- * Blog : http://jojoldu.tistory.com
- * Github : https://github.com/jojoldu
- */
+import java.util.stream.Stream;
 
 public interface PostsRepository extends JpaRepository<Posts, Long>{
+    @Query("SELECT p " +
+            "FROM Posts p " +
+            "ORDER BY p.id DESC")
+    Stream<Posts> findAllDesc();
 }
