@@ -1,11 +1,13 @@
 package com.devtycoon.webservice.dto.posts;
 
 import com.devtycoon.webservice.domain.posts.Posts;
+import lombok.Getter;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
+@Getter
 public class PostsMainResponseDto {
     private Long id;
     private String title;
