@@ -1,4 +1,4 @@
-package com.devtycoon.squirrel.webservice.domain;
+package com.devtycoon.webservice.domain;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
@@ -8,6 +8,12 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
+
+/**
+ * Created by jojoldu@gmail.com on 2017. 12. 15.
+ * Blog : http://jojoldu.tistory.com
+ * Github : https://github.com/jojoldu
+ */
 
 @Getter
 @MappedSuperclass
@@ -19,4 +25,5 @@ public abstract class BaseTimeEntity {
 
     @LastModifiedDate
     private LocalDateTime modifiedDate;
+
 }
