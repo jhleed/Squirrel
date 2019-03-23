@@ -1,4 +1,4 @@
-package com.devtycoon.squirrel;
+package com.devtycoon.webservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,9 +9,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class SquirrelApplicationTests {
 
-    @Test
-    public void contextLoads() {
-    }
+	@Test
+	public void contextLoads() {
+	}
 
 }
-
