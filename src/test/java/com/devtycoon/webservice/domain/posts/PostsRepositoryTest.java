@@ -46,8 +46,8 @@ public class PostsRepositoryTest {
 
         //then
         Posts posts = postsList.get(0);
-        assertThat(posts.getTitle(), is("테스트1"));
-        assertThat(posts.getContent(), is("테스트1의 본문"));
+        assertThat(posts.getTitle(), is("테스트 게시글"));
+        assertThat(posts.getContent(), is("테스트 본문"));
     }
 
     @Test
