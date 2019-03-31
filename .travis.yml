@@ -16,6 +16,11 @@ cache:
 # 여기선 프로젝트 내부에 둔 gradlew을 통해 clean & build 를 수행합니다.
 script: "./gradlew clean build"
 
+before_deploy:
+- zip -r Squirrel *
+- mkdir -p deploy
+- mv Squirrel.zip deploy/Squirrel.zip
+
 deploy:
 - provider: s3
   access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
@@ -24,6 +29,7 @@ deploy:
   region: ap-northeast-2
   skip_cleanup: true
   acl: public_read
+  local_dir: deploy
   wait-until-deployed: true
   on:
     repo: jhleed/Squirrel #Github 주소
