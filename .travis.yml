@@ -16,6 +16,19 @@ cache:
 # 여기선 프로젝트 내부에 둔 gradlew을 통해 clean & build 를 수행합니다.
 script: "./gradlew clean build"
 
+deploy:
+- provider: s3
+  access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
+  secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
+  bucket: springboot-webservice-deploy # 6-3-3에서 생성한 S3 버킷
+  region: ap-northeast-2
+  skip_cleanup: true
+  acl: public_read
+  wait-until-deployed: true
+  on:
+    repo: jhleed/Squirrel #Github 주소
+    branch: master
+
 # CI 실행 완료시 메일로 알람
 notifications:
   email: # Email외에도 Slack이 있으니, 관심있으신 분들은 링크1, 링크2를 참고하여 Slack도 추가하시는걸 추천드립니다.
