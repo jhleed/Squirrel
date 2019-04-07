@@ -10,7 +10,7 @@ public class SquirrelApplication {
 
 	private static final String APPLCATION_LOCATIONS = "spring.config.location="
 			+ "classpath:application.yml,"
-			+ "/Users/jongholee/dev/workspace/config/app/Squirrel/real-application.yml";
+			+ "/app/config/Squirrel/real-application.yml";
 
 	public static void main(String[] args) {
 		new SpringApplicationBuilder(SquirrelApplication.class)
